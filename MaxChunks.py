@@ -4,7 +4,7 @@ n=len(arr)
 maxi=arr[0]
 ans=0
 for i in range(n):
-    maxi=min(maxi,arr[i])
+    maxi=max(maxi,arr[i])
     if(i==maxi):
         ans+=1
 print(ans)

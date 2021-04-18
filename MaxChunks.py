@@ -1,14 +1,10 @@
 arr = list(map(int,input().split()))
 n=len(arr)
 
-pref=[arr[0]]
-
-for i in range(1,n):
-    pref.append(max(pref[-1],arr[i]))
-
-ans=0
+maxi=arr[0]
 for i in range(n):
-    if(i==pref[i]):
+    maxi=max(maxi,arr[i])
+    if(i==maxi):
         ans+=1
 print(ans)
 
